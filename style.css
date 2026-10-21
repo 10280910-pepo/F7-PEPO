@@ -1,0 +1,1084 @@
+:root {
+    --bg: #0b0c0f;
+    --panel: #111317;
+    --red: #e52532;
+    --white: #f4f4f4;
+    --muted: #96999f;
+    --line: rgba(255,255,255,.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input {
+    font: inherit;
+}
+
+.site-header {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 20;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+    background: rgba(7,8,10,.5);
+    backdrop-filter: blur(8px);
+}
+
+.navbar {
+    min-height: 78px;
+}
+
+.logo {
+    color: white !important;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -.5px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.logo b {
+    color: white;
+}
+
+.navbar-nav {
+    gap: 18px;
+}
+
+.nav-link {
+    color: #d0d0d0 !important;
+    font-size: 13px;
+    transition: color .25s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+}
+
+.header-link {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--red);
+    padding: 10px 0;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,.35);
+}
+
+/* INICIO CON VIDEO */
+
+.hero {
+    position: relative;
+    min-height: 760px;
+    height: 100svh;
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #101115 url("../images/hero.jpg") center/cover no-repeat;
+}
+
+.hero-video,
+.hero-shade,
+.hero-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-video {
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-shade {
+    background:
+        linear-gradient(90deg, rgba(5,6,8,.91) 0%, rgba(5,6,8,.68) 42%, rgba(5,6,8,.12) 100%),
+        linear-gradient(0deg, #090a0c 0%, transparent 28%, rgba(0,0,0,.2) 100%);
+    z-index: 1;
+}
+
+.hero-grid {
+    z-index: 1;
+    opacity: .14;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+    background-size: 75px 75px;
+    mask-image: linear-gradient(to right, black, transparent 75%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px;
+}
+
+.hero-copy {
+    max-width: 670px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+.eyebrow span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--red);
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 12px var(--red);
+}
+
+.hero h1,
+.section-top h2,
+.about-content h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: .9;
+}
+
+.hero h1 {
+    font-size: clamp(64px, 9vw, 112px);
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.section-top h2 span,
+.about-content h2 span {
+    color: var(--red);
+}
+
+.hero-text {
+    max-width: 440px;
+    color: #c6c6c6;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.btn-main,
+.btn-outline-custom {
+    min-height: 49px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 0 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    transition: .25s ease;
+}
+
+.btn-main {
+    color: white;
+    background: var(--red);
+    border: 1px solid var(--red);
+}
+
+.btn-main:hover {
+    color: white;
+    background: #b91824;
+    border-color: #b91824;
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    color: white;
+    border: 1px solid rgba(255,255,255,.4);
+    background: rgba(0,0,0,.15);
+}
+
+.btn-outline-custom:hover {
+    border-color: white;
+    color: white;
+    background: rgba(255,255,255,.08);
+}
+
+.hero-meta {
+    display: flex;
+    gap: 40px;
+    margin-top: 62px;
+}
+
+.hero-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-meta strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+}
+
+.hero-meta span {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+}
+
+.video-controls {
+    position: absolute;
+    z-index: 3;
+    right: 5%;
+    bottom: 55px;
+    display: flex;
+    gap: 10px;
+}
+
+.video-control {
+    width: 43px;
+    height: 43px;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 50%;
+    background: rgba(0,0,0,.25);
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.video-control:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.scroll-cue,
+.hero-index {
+    position: absolute;
+    z-index: 3;
+    bottom: 67px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.scroll-cue {
+    left: 5%;
+    color: #ddd;
+}
+
+.scroll-cue span {
+    color: var(--red);
+    margin-left: 12px;
+}
+
+.hero-index {
+    right: 5%;
+    bottom: 25px;
+    color: #aaa;
+}
+
+/* FRANJA ANIMADA */
+
+.ticker {
+    overflow: hidden;
+    background: var(--red);
+    padding: 15px 0;
+    transform: rotate(-1deg) scale(1.02);
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 30px;
+    animation: tickerMove 28s linear infinite;
+}
+
+.ticker-track span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.ticker-track i {
+    font-style: normal;
+    color: #151515;
+}
+
+@keyframes tickerMove {
+    to { transform: translateX(-50%); }
+}
+
+/* SECCIONES */
+
+.section-padding {
+    padding: 115px 0 90px;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 43px;
+}
+
+.section-top .eyebrow {
+    color: var(--red);
+}
+
+.section-top h2,
+.about-content h2 {
+    font-size: clamp(42px, 6vw, 70px);
+    margin-bottom: 15px;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0;
+}
+
+.section-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.section-number span {
+    color: #6c6c6c;
+    font-size: 17px;
+}
+
+.car-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    height: 100%;
+    transition: transform .3s, border-color .3s;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(229,37,50,.7);
+}
+
+.car-photo {
+    height: 245px;
+    position: relative;
+    overflow: hidden;
+    background: #1b1c20;
+}
+
+.car-photo::after {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.35));
+    pointer-events: none;
+}
+
+.car-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s;
+}
+
+.car-card:hover .car-photo img {
+    transform: scale(1.06);
+}
+
+.car-tag,
+.car-number {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+}
+
+.car-tag {
+    left: 15px;
+    background: var(--red);
+}
+
+.car-number {
+    right: 15px;
+    background: rgba(0,0,0,.55);
+    color: white;
+}
+
+.car-info {
+    padding: 22px;
+}
+
+.car-info > p {
+    color: var(--red);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.car-info h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 31px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #a9a9a9;
+}
+
+.car-bottom span:last-child {
+    color: var(--red);
+    font-size: 18px;
+}
+
+.carousel-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.custom-indicators {
+    position: static;
+    gap: 8px;
+    margin: 0;
+}
+
+.custom-indicators [data-bs-target] {
+    width: 26px;
+    height: 3px;
+    border: 0;
+    opacity: .35;
+    background: white;
+    margin: 0;
+}
+
+.custom-indicators .active {
+    opacity: 1;
+    background: var(--red);
+}
+
+.carousel-arrows {
+    display: flex;
+    gap: 9px;
+}
+
+.arrow-btn {
+    width: 45px;
+    height: 45px;
+    color: white;
+    border: 1px solid var(--line);
+    background: transparent;
+    font-size: 20px;
+    transition: .2s;
+}
+
+.arrow-btn:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+/* BUSCADOR */
+
+.filter-section {
+    background: #101115;
+    padding: 95px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.search-panel {
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: #0b0c0f;
+}
+
+.search-panel label {
+    display: block;
+    margin-bottom: 12px;
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+}
+
+.search-panel input {
+    width: 100%;
+    padding: 15px 17px;
+    background: #15161a;
+    border: 1px solid #34353a;
+    color: white;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.search-panel input:focus {
+    border-color: var(--red);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    color: #bbb;
+    border: 1px solid #34353a;
+    background: transparent;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+}
+
+.search-results {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 25px 0 0;
+}
+
+.filtered-grid {
+    margin-top: 5px;
+}
+
+.no-results {
+    padding: 30px 0;
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* NOSOTROS Y FOOTER */
+
+.about-section {
+    padding: 125px 0;
+    background:
+        linear-gradient(90deg, rgba(9,10,12,.97), rgba(9,10,12,.7)),
+        url("../images/hero.jpg") center/cover no-repeat;
+}
+
+.about-content {
+    max-width: 780px;
+}
+
+.about-content > p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 25px 0 30px;
+    color: #c0c0c0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.footer {
+    min-height: 100px;
+    padding: 28px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid var(--line);
+}
+
+.footer p,
+.footer > span {
+    color: #929292;
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.footer .logo {
+    font-size: 23px;
+}
+
+/* TELÉFONOS Y TABLETAS */
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding: 18px 0 23px;
+        background: #0b0c0f;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+    }
+
+    .header-link {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .hero {
+        min-height: 720px;
+        max-height: none;
+    }
+
+    .hero-shade {
+        background:
+            linear-gradient(90deg, rgba(5,6,8,.84), rgba(5,6,8,.35)),
+            linear-gradient(0deg, #090a0c, transparent 50%);
+    }
+
+    .car-photo {
+        height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        min-height: 68px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero {
+        min-height: 760px;
+        height: 100svh;
+        align-items: center;
+    }
+
+    .hero-video {
+        object-position: 58% center;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: clamp(58px, 15vw, 82px);
+    }
+
+    .hero-text {
+        font-size: 13px;
+        max-width: 320px;
+    }
+
+    .hero-meta {
+        gap: 24px;
+        margin-top: 43px;
+    }
+
+    .hero-meta strong {
+        font-size: 25px;
+    }
+
+    .hero-meta span {
+        font-size: 8px;
+    }
+
+    .btn-main,
+    .btn-outline-custom {
+        padding: 0 13px;
+        min-height: 45px;
+        font-size: 9px;
+        gap: 10px;
+    }
+
+    .video-controls {
+        right: 20px;
+        bottom: 55px;
+    }
+
+    .video-control {
+        width: 38px;
+        height: 38px;
+    }
+
+    .scroll-cue {
+        left: 20px;
+        bottom: 68px;
+        font-size: 8px;
+    }
+
+    .hero-index {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 80px 0 65px;
+    }
+
+    .section-top {
+        align-items: start;
+        margin-bottom: 30px;
+    }
+
+    .section-top h2 {
+        font-size: 43px;
+    }
+
+    .section-number {
+        font-size: 23px;
+    }
+
+    .car-photo {
+        height: 235px;
+    }
+
+    .filter-section {
+        padding: 75px 0;
+    }
+
+    .search-panel {
+        padding: 17px;
+    }
+
+    .filter-btn {
+        padding: 9px 11px;
+        font-size: 9px;
+    }
+
+    .about-section {
+        padding: 85px 0;
+    }
+
+    .footer {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* ==============================
+   MODO CLARO - VELOCITY PEPO
+============================== */
+
+body.modo-claro {
+    --bg: #f1f1f1;
+    --panel: #ffffff;
+    --white: #202020;
+    --muted: #666666;
+    --line: rgba(0, 0, 0, 0.15);
+
+    background: var(--bg);
+    color: var(--white);
+}
+
+/* ENCABEZADO */
+body.modo-claro .site-header {
+    background: rgba(245, 245, 245, 0.94);
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+body.modo-claro .logo,
+body.modo-claro .logo b {
+    color: #202020 !important;
+}
+
+body.modo-claro .nav-link,
+body.modo-claro .header-link {
+    color: #303030 !important;
+}
+
+body.modo-claro .nav-link:hover,
+body.modo-claro .nav-link.active {
+    color: var(--red) !important;
+}
+
+/* SECCIONES */
+body.modo-claro #galeria {
+    background: #f1f1f1;
+    color: #202020;
+}
+
+body.modo-claro .filter-section {
+    background: #e7e7e7;
+}
+
+body.modo-claro .about-section {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245, 245, 245, 0.96),
+            rgba(245, 245, 245, 0.82)
+        ),
+        url("../images/hero.jpg") center/cover no-repeat;
+    color: #202020;
+}
+
+/* TEXTOS */
+body.modo-claro .section-top h2,
+body.modo-claro .about-content h2,
+body.modo-claro .car-info h3 {
+    color: #202020;
+}
+
+body.modo-claro .muted,
+body.modo-claro .about-content > p:not(.eyebrow) {
+    color: #555555;
+}
+
+/* TARJETAS DE CARROS */
+body.modo-claro .car-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.14);
+}
+
+body.modo-claro .car-bottom {
+    color: #555555;
+    border-top-color: rgba(0, 0, 0, 0.15);
+}
+
+/* BUSCADOR */
+body.modo-claro .search-panel {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.modo-claro .search-panel label {
+    color: #444444;
+}
+
+body.modo-claro .search-panel input {
+    background: #f5f5f5;
+    color: #202020;
+    border-color: #cccccc;
+}
+
+body.modo-claro .filter-btn {
+    color: #333333;
+    border-color: #bbbbbb;
+}
+
+body.modo-claro .filter-btn:hover,
+body.modo-claro .filter-btn.active {
+    background: var(--red);
+    color: #ffffff;
+    border-color: var(--red);
+}
+
+/* PIE DE PÁGINA */
+body.modo-claro .footer {
+    background: #eeeeee;
+    border-top-color: rgba(0, 0, 0, 0.15);
+}
+
+body.modo-claro .footer p,
+body.modo-claro .footer > span {
+    color: #555555;
+}
+
+/* BOTÓN DEL TEMA */
+.theme-btn {
+    background: transparent;
+    color: inherit;
+    border: 1px solid currentColor;
+    padding: 8px 12px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.theme-btn:hover {
+    background: rgba(128, 128, 128, 0.15);
+}
+
+body.modo-claro .theme-btn {
+    color: #202020;
+    border-color: #777777;
+}
+
+/* MENÚ EN TELÉFONOS */
+@media (max-width: 991px) {
+    body.modo-claro .navbar-collapse {
+        background: #f5f5f5;
+    }
+}
+
+/* ===== MODO CLARO COMPLETO ===== */
+
+body.modo-claro {
+    background: #f1f1f1 !important;
+    color: #202020;
+}
+
+/* Fondo general de las secciones */
+body.modo-claro #galeria,
+body.modo-claro #marcas,
+body.modo-claro .filter-section {
+    background: #f1f1f1 !important;
+    color: #202020;
+}
+
+/* Encabezado y menú */
+body.modo-claro .site-header {
+    background: rgba(245, 245, 245, 0.97) !important;
+}
+
+body.modo-claro .navbar-collapse {
+    background: #f1f1f1;
+}
+
+body.modo-claro .navbar-toggler {
+    border-color: #777;
+}
+
+body.modo-claro .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Títulos y textos */
+body.modo-claro h1,
+body.modo-claro h2,
+body.modo-claro h3,
+body.modo-claro .nav-link,
+body.modo-claro .logo,
+body.modo-claro .header-link,
+body.modo-claro .section-number {
+    color: #202020;
+}
+
+body.modo-claro .hero-text,
+body.modo-claro .eyebrow,
+body.modo-claro .muted,
+body.modo-claro .hero-meta span,
+body.modo-claro .scroll-cue {
+    color: #444;
+}
+
+/* Portada con video: conserva el video */
+body.modo-claro .hero-shade {
+    background: linear-gradient(
+        90deg,
+        rgba(245,245,245,.88),
+        rgba(245,245,245,.55) 48%,
+        rgba(245,245,245,.08)
+    );
+}
+
+body.modo-claro .btn-outline-custom {
+    color: #202020;
+    border-color: #555;
+    background: rgba(255,255,255,.4);
+}
+
+/* Tarjetas de vehículos */
+body.modo-claro .car-card,
+body.modo-claro .search-panel {
+    background: #fff;
+    color: #202020;
+    border-color: #d0d0d0;
+}
+
+body.modo-claro .car-info h3 {
+    color: #202020;
+}
+
+body.modo-claro .car-bottom {
+    color: #555;
+    border-color: #ddd;
+}
+
+/* Buscador y filtros */
+body.modo-claro .search-panel label {
+    color: #444;
+}
+
+body.modo-claro .search-panel input {
+    background: #fff;
+    color: #202020;
+    border-color: #bbb;
+}
+
+body.modo-claro .filter-btn {
+    color: #333;
+    border-color: #bbb;
+}
+
+/* Sección nosotros */
+body.modo-claro .about-section {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,245,245,.96),
+            rgba(245,245,245,.80)
+        ),
+        url("./caarro.avif") center/cover no-repeat;
+}
+
+body.modo-claro .about-content > p:not(.eyebrow) {
+    color: #444;
+}
+
+/* Pie de página */
+body.modo-claro .footer {
+    background: #e7e7e7;
+    color: #202020;
+    border-color: #ccc;
+}
+
+body.modo-claro .footer p,
+body.modo-claro .footer > span {
+    color: #555;
+}
+
+/* Conserva el rojo de la marca */
+body.modo-claro .hero h1 span,
+body.modo-claro .section-top h2 span,
+body.modo-claro .about-content h2 span {
+    color: #e52532;
+}

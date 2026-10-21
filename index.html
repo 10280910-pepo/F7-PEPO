@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090a0c">
+    <meta name="description" content="VELOCITY PEPO: deportivos, tuning y cultura automotriz.">
+    <title>VELOCITY PEPO | Street Culture</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand logo" href="#inicio">
+            VELOCITY <span>PEPO</span><b>.</b>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false"
+                aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <button id="idiomaBtn" class="btn btn-outline-light btn-sm ms-3"
+        type="button">
+    EN
+                  </button>
+                  <button id="temaBtn" class="theme-btn" type="button">
+    ☀ Modo claro
+</button>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+            </ul>
+            <a class="header-link" href="#galeria">VER COLECCIÓN ↗</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- INICIO CON VIDEO DE FONDO -->
+    <section class="hero" id="inicio">
+        <video class="hero-video" id="heroVideo"
+               autoplay muted loop playsinline preload="metadata"
+               poster="./caarro.avif">
+            <source src="./WhatsApp Video 2026-10-20 at 6.09.45 PM.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-shade"></div>
+        <div class="hero-grid"></div>
+
+        <div class="container hero-content">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> CULTURA AUTOMOTRIZ · EL SALVADOR</p>
+                <h1>NO ES SOLO<br>UN <span>CARRO.</span></h1>
+                <p class="hero-text">
+                    Es actitud, potencia y estilo propio.
+                    Bienvenido al lado más salvaje de la cultura automotriz.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#galeria" class="btn-main">
+                        EXPLORAR GALERÍA <span>↗</span>
+                    </a>
+                    <a href="#nosotros" class="btn-outline-custom">
+                        CONOCER MÁS
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <div><strong>01</strong><span>VELOCIDAD</span></div>
+                    <div><strong>02</strong><span>DISEÑO</span></div>
+                    <div><strong>03</strong><span>ACTITUD</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-controls">
+            <button id="videoToggle" class="video-control" type="button"
+                    aria-label="Pausar video" title="Pausar o reproducir video">Ⅱ</button>
+            <button id="soundToggle" class="video-control" type="button"
+                    aria-label="Activar sonido" title="Activar o silenciar sonido">♪</button>
+        </div>
+
+        <a href="#galeria" class="scroll-cue">DESCUBRÍ LA COLECCIÓN <span>↓</span></a>
+        <div class="hero-index">VP — 001 / 026</div>
+    </section>
+
+   
+    <!-- GALERÍA / CARRUSEL BOOTSTRAP -->
+    <section class="section-padding" id="galeria">
+        <div class="container">
+            <div class="section-top">
+                <div>
+                    <p class="eyebrow">01 / SELECCIÓN DE LA CASA</p>
+                    <h2>THE STREET <span>COLLECTION.</span></h2>
+                    <p class="muted">Máquinas que no necesitan presentación.</p>
+                </div>
+                <div class="section-number">01 <span>/ 03</span></div>
+            </div>
+
+            <div id="carCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Nissan" data-name="Nissan GT-R R35">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&w=1000&q=85" alt="Nissan deportivo en un entorno urbano" loading="lazy">
+                                        <span class="car-tag">JDM LEGEND</span>
+                                        <span class="car-number">01</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>NISSAN / JAPAN</p>
+                                        <h3>GT-R R35</h3>
+                                        <div class="car-bottom"><span>GODZILLA</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="BMW" data-name="BMW M4 Competition">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1000&q=85" alt="BMW deportivo" loading="lazy">
+                                        <span class="car-tag">GERMAN POWER</span>
+                                        <span class="car-number">02</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>BMW / GERMANY</p>
+                                        <h3>M4 COMPETITION</h3>
+                                        <div class="car-bottom"><span>PURE PERFORMANCE</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Porsche" data-name="Porsche 911 GT3">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85" alt="Porsche 911 deportivo" loading="lazy">
+                                        <span class="car-tag">TRACK DNA</span>
+                                        <span class="car-number">03</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>PORSCHE / GERMANY</p>
+                                        <h3>911 GT3</h3>
+                                        <div class="car-bottom"><span>DRIVER'S MACHINE</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Ferrari" data-name="Ferrari 488 GTB">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1592198084033-a desc?auto=format&fit=crop&w=1000&q=85" alt="Ferrari deportivo rojo" loading="lazy">
+                                        <span class="car-tag">ITALIAN ICON</span>
+                                        <span class="car-number">04</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>FERRARI / ITALY</p>
+                                        <h3>488 GTB</h3>
+                                        <div class="car-bottom"><span>BUILT FOR EMOTION</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Toyota" data-name="Toyota Supra MK5">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1000&q=85" alt="Toyota Supra deportivo" loading="lazy">
+                                        <span class="car-tag">JDM CULTURE</span>
+                                        <span class="car-number">05</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>TOYOTA / JAPAN</p>
+                                        <h3>SUPRA MK5</h3>
+                                        <div class="car-bottom"><span>TUNING FAVORITE</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Lamborghini" data-name="Lamborghini Huracán">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1000&q=85" alt="Superdeportivo de lujo" loading="lazy">
+                                        <span class="car-tag">SUPERCAR</span>
+                                        <span class="car-number">06</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>LAMBORGHINI / ITALY</p>
+                                        <h3>HURACÁN</h3>
+                                        <div class="car-bottom"><span>NO COMPROMISE</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Nissan" data-name="Nissan Silvia S15">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=85" alt="Coupé deportivo" loading="lazy">
+                                        <span class="car-tag">DRIFT CULTURE</span>
+                                        <span class="car-number">07</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>NISSAN / JAPAN</p>
+                                        <h3>SILVIA S15</h3>
+                                        <div class="car-bottom"><span>SLIDE YOUR WAY</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="BMW" data-name="BMW M3">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1520050206274-a1ae44613e6d?auto=format&fit=crop&w=1000&q=85" alt="BMW M deportivo" loading="lazy">
+                                        <span class="car-tag">STREET SPEC</span>
+                                        <span class="car-number">08</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>BMW / GERMANY</p>
+                                        <h3>M3</h3>
+                                        <div class="car-bottom"><span>DAILY WITH ATTITUDE</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <article class="car-card" data-brand="Porsche" data-name="Porsche Cayman GT4">
+                                    <div class="car-photo">
+                                        <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1000&q=85" alt="Coupé deportivo en carretera" loading="lazy">
+                                        <span class="car-tag">PURE HANDLING</span>
+                                        <span class="car-number">09</span>
+                                    </div>
+                                    <div class="car-info">
+                                        <p>PORSCHE / GERMANY</p>
+                                        <h3>CAYMAN GT4</h3>
+                                        <div class="car-bottom"><span>MADE TO DRIVE</span><span>↗</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-navigation">
+                    <div class="carousel-indicators custom-indicators">
+                        <button type="button" data-bs-target="#carCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Página 1"></button>
+                        <button type="button" data-bs-target="#carCarousel" data-bs-slide-to="1" aria-label="Página 2"></button>
+                        <button type="button" data-bs-target="#carCarousel" data-bs-slide-to="2" aria-label="Página 3"></button>
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="arrow-btn" type="button" data-bs-target="#carCarousel" data-bs-slide="prev" aria-label="Carros anteriores">←</button>
+                        <button class="arrow-btn" type="button" data-bs-target="#carCarousel" data-bs-slide="next" aria-label="Carros siguientes">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUSCADOR Y FILTROS -->
+    <section class="filter-section" id="marcas">
+        <div class="container">
+            <div class="section-top">
+                <div>
+                    <p class="eyebrow">02 / FIND YOUR STYLE</p>
+                    <h2>FIND YOUR <span>RIDE.</span></h2>
+                </div>
+            </div>
+
+            <div class="search-panel">
+                <label for="searchInput">BUSCAR POR MARCA O MODELO</label>
+                <input id="searchInput" type="search" placeholder="Ej. Nissan, BMW, GT-R...">
+                <div class="filter-buttons" id="brandFilters">
+                    <button class="filter-btn active" data-brand="all">TODOS</button>
+                    <button class="filter-btn" data-brand="Nissan">NISSAN</button>
+                    <button class="filter-btn" data-brand="BMW">BMW</button>
+                    <button class="filter-btn" data-brand="Porsche">PORSCHE</button>
+                    <button class="filter-btn" data-brand="Ferrari">FERRARI</button>
+                    <button class="filter-btn" data-brand="Toyota">TOYOTA</button>
+                    <button class="filter-btn" data-brand="Lamborghini">LAMBORGHINI</button>
+                </div>
+                <p class="search-results" id="resultsText">9 vehículos en la colección</p>
+                <div class="filtered-grid row g-4" id="filteredGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="about-section" id="nosotros">
+        <div class="container about-content">
+            <p class="eyebrow">03 / MORE THAN CARS</p>
+            <h2>MADE FOR THE<br><span>OBSESSED.</span></h2>
+            <p>
+                Velocity Pepo nace de la pasión por los motores, el diseño
+                y la cultura de la calle. Un espacio para descubrir máquinas
+                increíbles y conocer el mundo detrás de cada carro.
+            </p>
+            <a href="#inicio" class="btn-main">VOLVER AL INICIO ↑</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="logo" href="#inicio">VELOCITY <span>PEPO</span><b>.</b></a>
+    <p>HECHO PARA LOS QUE VIVEN LOS MOTORES.</p>
+    <span>© <span id="year"></span> VELOCITY PEPO</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
