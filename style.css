@@ -1082,3 +1082,80 @@ body.modo-claro .section-top h2 span,
 body.modo-claro .about-content h2 span {
     color: #e52532;
 }
+
+/* CONTACTO - VELOCITY PEPO */
+.contact-section {
+    padding: 80px 20px;
+    background: var(--bg, #0b0c0f);
+    color: var(--white, #f4f4f4);
+}
+
+.contact-section h2 {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 800;
+}
+
+#contactForm {
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    gap: 12px;
+}
+
+#contactForm label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #383b43;
+    border-radius: 7px;
+    background: var(--panel, #111317);
+    color: var(--white, #f4f4f4);
+    font: inherit;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #e52532;
+}
+
+#contactForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contactSubmit {
+    margin-top: 12px;
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    background: #e52532;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#contactSubmit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#contactStatus {
+    min-height: 20px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 55px 18px;
+    }
+}

@@ -309,7 +309,32 @@
             <a href="#inicio" class="btn-main">VOLVER AL INICIO ↑</a>
         </div>
     </section>
+     <!-- Aquí termina el contenido de tu página -->
+
+    <!-- AQUÍ PEGÁS EL FORMULARIO DE CONTACTO -->
+    <section class="contact-section" id="contacto">
+      <h2>Hablemos de autos</h2>
+
+      <form id="contactForm">
+        <label for="contactName">Tu nombre</label>
+        <input id="contactName" name="nombre" required>
+
+        <label for="contactEmail">Tu correo</label>
+        <input id="contactEmail" name="correo" type="email" required>
+
+        <label for="contactMessage">Tu mensaje</label>
+        <textarea id="contactMessage" name="mensaje" required></textarea>
+
+        <button type="submit" id="contactSubmit">ENVIAR MENSAJE</button>
+        <p id="contactStatus" role="status"></p>
+      </form>
+    </section>
+    <!-- FIN DEL FORMULARIO -->
 </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
 
 <footer class="footer">
     <a class="logo" href="#inicio">VELOCITY <span>PEPO</span><b>.</b></a>

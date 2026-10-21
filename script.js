@@ -264,3 +264,51 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 });
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    const contactStatus = document.getElementById("contactStatus");
+    const contactSubmit = document.getElementById("contactSubmit");
+
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const datos = {
+            nombre: document.getElementById("contactName").value.trim(),
+            correo: document.getElementById("contactEmail").value.trim(),
+            mensaje: document.getElementById("contactMessage").value.trim()
+        };
+
+        contactSubmit.disabled = true;
+        contactSubmit.textContent = "ENVIANDO...";
+        contactStatus.textContent = "";
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(datos)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "No se pudo enviar el mensaje.");
+            }
+
+            contactStatus.textContent = "¡Mensaje enviado correctamente!";
+            contactForm.reset();
+
+        } catch (error) {
+            contactStatus.textContent =
+                error.message || "Error al enviar. Intentá de nuevo.";
+        } finally {
+            contactSubmit.disabled = false;
+            contactSubmit.textContent = "ENVIAR MENSAJE";
+        }
+    });
+}
+
